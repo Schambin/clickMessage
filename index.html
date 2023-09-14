@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imgs/LOGO_NORTE_TEL_03 (1).png" type="image/x-icon">
+    <title>NorteTel</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url("imgs/5509862.jpg");        
+        }
+
+        #container { 
+            display: flex;
+            align-items: center;
+        }
+
+        #imagem {
+            width: 200px;
+            cursor: pointer;
+            transition: transform 0.5s;
+            /* Aumenta o tamanho da imagem em 25% */
+            transform: scale(1.50);
+        }
+
+        #mensagem {
+            color: rgb(255, 255, 255);
+            opacity: 0;
+            transition:3s;
+            margin-left: 0px;
+            margin-top: 143px;
+            /* Altera a fonte e aumenta o tamanho da mensagem */
+            font-family: cursive, 'Times New Roman', Times, serif, sans-serif;
+            font-size: 28px;
+            
+        }
+
+        #container:hover #imagem {
+            transform: translateX(-50px) scale(1.50);
+        }
+
+        #container:hover #mensagem {
+            opacity: 1;
+        }
+
+        footer{
+            color: white;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+        }
+        a{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <img id="imagem" src="imgs/3700_5_07-removebg-preview.png" alt="Imagem" width="200">
+        <p id="mensagem">Eu procuro tesouros!</p>
+    </div>
+    <footer>Coded by <a href="#">Kauan Arthur</a></footer>
+    <script>
+        const container = document.getElementById('container');
+        const mensagem = document.getElementById('mensagem');
+
+        container.addEventListener('mouseenter', () => {
+            mensagem.textContent = 'Eu procuro tesouros!';
+        }); 
+    </script>
+</body>
+</html>
